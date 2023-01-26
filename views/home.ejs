@@ -17,10 +17,10 @@
 <% for(i=0;i<blogPosts.length;i++){%>
     <h1><%= blogPosts[i].title %> </h1>
     <p><%= blogPosts[i].truncatedText%> </p>
-    <a href=<%="/posts/${<%=blogPosts.hrefLink%>}" %>>Read More</a>
+    <a href= <% "posts/${<%=blogPosts.hrefLink%>}" %>>Read More</a>
 
     <% } %> 
- 
+ <!-- Hell Yeh My project is on git hub you fucking idiots  -->
 
 
     <%- include('partials/footer') %> 
