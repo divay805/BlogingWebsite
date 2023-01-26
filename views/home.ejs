@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %> 
+   
+    <h1>Home</h1>
+   
+    <p><%= textIt  %> </p>
+<% for(i=0;i<blogPosts.length;i++){%>
+    <h1><%= blogPosts[i].title %> </h1>
+    <p><%= blogPosts[i].truncatedText%> </p>
+    <a href=<%="/posts/${<%=blogPosts.hrefLink%>}" %>>Read More</a>
+
+    <% } %> 
+ 
+
+
+    <%- include('partials/footer') %> 
+</body>
+</html>
